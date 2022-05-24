@@ -29,6 +29,7 @@ public class Main {
                     catch(Exception ex){
 
                         System.out.println(ex.getMessage());
+                        scanner.nextLine();
                     }
                     break;
                 case "save":
@@ -39,20 +40,25 @@ public class Main {
                     catch(Exception ex){
 
                         System.out.println(ex.getMessage());
+                        scanner.nextLine();
                     }
+                    break;
                 case "x":
-                    xy.setX(Double.parseDouble(scanner.nextLine()));
+                    try{
+                        xy.setX(Double.parseDouble(scanner.nextLine()));
+                    }
+                    catch (Exception ex) {
+                        System.out.println("Не коректное число");
+                        scanner.nextLine();
+                    }
                     break;
                 case "y":
                     xy.findY();
                     break;
                 default:
-                    try{
-                        xy.setX(Double.parseDouble(line));
-                    }
-                    catch (Exception ex) {
-                        System.out.println("Не известная команда");
-                    }
+                    System.out.println("Не известная команда");
+                    scanner.nextLine();
+                    break;
             }
         }
     }
