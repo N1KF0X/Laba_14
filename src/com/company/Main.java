@@ -8,12 +8,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean isStop = false;
-        System.out.println("stop - выход из программы\n" +
-                "x - изменить x\n" +
-                "y - получить значение функции\n" +
-                "save - похранить данные\n" +
-                "upload - загрузить данные\n" +
-                "Введите x");
+        System.out.println("""
+                stop - выход из программы
+                x - изменить x
+                y - получить значение функции
+                save - похранить данные
+                upload - загрузить данные
+                Введите x""");
         XY xy = new XY(Double.parseDouble(scanner.nextLine()));
 	    while (!isStop){
             String line = scanner.nextLine();
